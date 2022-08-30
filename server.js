@@ -29,7 +29,10 @@ app.get("/drinks", function(req, res){
 // used as show page
 
 app.get("/drinks/:id", function(req, res){
-    res.send(req.params.id)
+    res.render("drinks_show.ejs", {
+        // need to add parameter here so that the show page can access the name and other data
+        drink: drinks[req.params.id]
+    })
 })
 
 // playing around with nidex parameters
