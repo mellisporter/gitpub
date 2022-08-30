@@ -50,7 +50,7 @@ app.get("/drinks/:id", function(req, res){
 
 app.get("/food/:foodId", function (req, res){
     res.render("food_show.ejs", {
-      foodItem: food[req.params.id]  
+      foodItem: food[req.params.foodId]  
     })
 })
 
