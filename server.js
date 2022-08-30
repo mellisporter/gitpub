@@ -26,7 +26,10 @@ app.get("/drinks", function(req, res){
     // css works -- confirmed!
     res.render("drinks_index.ejs" , {
         // set up allDrinks as an object as the second parameter to pull this data
-        allDrinks: drinks
+        allDrinks: drinks,
+        // adding food item to the list as well
+        foodItem: food[req.params.id],
+        allFood: food,
     })
 })
 
@@ -44,7 +47,8 @@ app.get("/food", function (req, res){
 app.get("/drinks/:id", function(req, res){
     res.render("drinks_show.ejs", {
         // need to add parameter here so that the show page can access the name and other data
-        drink: drinks[req.params.id]
+        drink: drinks[req.params.id],
+        
     })
 })
 
