@@ -13,15 +13,13 @@
     <ul>
         <!-- create a loop to display allDrinks and their names, like we did for fruits in class -->
         <!-- accidentally did this part too early for the markdown, but this connects the index and show pages. it all functions -->
-        <% for (let i = 0; i < allDrinks.length; i++) { %>
+        <% for (let i = 0; i < allFood.length; i++) { %>
             <li>
-                <a href="/drinks/<%=i%>"><%=allDrinks[i].name %></a>
+                <a href="/food/<%=i%>"><%=allFood[i].name %></a>
             </li>
        <% } %>
        
     </ul>
-    <!-- setting up new list for food items -->
-    
     <style type="text/css">
         body {
           color: blanchedalmond;
