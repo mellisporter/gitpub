@@ -18,5 +18,7 @@ app.get("/", function(req,res){
 })
 
 app.get("/drinks", function(req, res){
-    res.send(drinks)
+    // sets up index view and renders
+    // css works -- confirmed!
+    res.render("drinks_index.ejs")
 })
