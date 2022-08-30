@@ -10,6 +10,15 @@
     <h1>
         <p>Welcome to GitPub</p>
     </h1>
+    <ul>
+        <!-- create a loop to display allDrinks and their names, like we did for fruits in class -->
+        <% for (let i = 0; i < allDrinks.length; i++) { %>
+            <li>
+                <a href="/drinks/<%=i%>"><%=allDrinks[i].name.toUpperCase() %></a>
+            </li>
+       <% } %>
+       
+    </ul>
     <style type="text/css">
         body {
           color: blanchedalmond;

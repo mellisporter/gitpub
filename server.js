@@ -20,5 +20,18 @@ app.get("/", function(req,res){
 app.get("/drinks", function(req, res){
     // sets up index view and renders
     // css works -- confirmed!
+    res.render("drinks_index.ejs" , {
+        allDrinks: drinks
+    })
+})
+
+app.get("/drinks/:indexOfDrinksArray", function(req, res){
+    // sets up index view and renders
+    // css works -- confirmed!
     res.render("drinks_index.ejs")
 })
+
+// playing around with nidex parameters
+// app.get("/drinks/:indexOfDrinksArray", function(req, res){
+//     res.send(drinks[req.params.indexOfDrinksArray].name.toUpperCase())
+// })
