@@ -21,14 +21,15 @@ app.get("/drinks", function(req, res){
     // sets up index view and renders
     // css works -- confirmed!
     res.render("drinks_index.ejs" , {
+        // set up allDrinks as an object as the second parameter to pull this data
         allDrinks: drinks
     })
 })
+// set up new route for drinks/id
+// used as show page
 
-app.get("/drinks/:indexOfDrinksArray", function(req, res){
-    // sets up index view and renders
-    // css works -- confirmed!
-    res.render("drinks_index.ejs")
+app.get("/drinks/:id", function(req, res){
+    res.send(req.params.id)
 })
 
 // playing around with nidex parameters
