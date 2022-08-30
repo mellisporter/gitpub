@@ -14,7 +14,7 @@
         <!-- create a loop to display allDrinks and their names, like we did for fruits in class -->
         <% for (let i = 0; i < allDrinks.length; i++) { %>
             <li>
-                <a href="/drinks/<%=i%>"><%=allDrinks[i].name.toUpperCase() %></a>
+                <a href="/drinks/<%=i%>"><%=allDrinks[i].name %></a>
             </li>
        <% } %>
        
@@ -23,6 +23,10 @@
         body {
           color: blanchedalmond;
           background-color: steelblue;
+        }
+/* adding list transform text to capitalize drink names. shoutout to ryan and help channel */
+        li {
+            text-transform: capitalize;
         }
         /* style works and has been tested */
       </style>
